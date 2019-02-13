@@ -19,7 +19,7 @@ def convert(lines):
 			person = 'Tom'
 			continue
 		if person:
-			new.append(person + ': ' + line)
+			new.append(person + ':' + line)
 	return new
 
 
@@ -33,6 +33,5 @@ def main():
 	lines = read_file('input.txt')
 	lines = convert(lines)
 	write_file('output.txt', lines)
-
 
 main()
