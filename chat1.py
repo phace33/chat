@@ -1,4 +1,5 @@
 
+
 def read_file(filename):#讀取
     lines = []
     with open(filename, 'r', encoding='utf-8-sig') as f:
