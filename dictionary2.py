@@ -1,9 +1,10 @@
 
-count = 0
+
 total = 0
 #讀取檔案
 def read_file(filename):
     data = []
+    count = 0
     with open(filename,'r') as f:
         for line in f:
             data.append(line)
@@ -32,6 +33,7 @@ def print_frequency(wc):
         if wc[word] >1000000:
             print(word, wc[word])
     print(len(wc))
+
 
 def user_input(wc):
     while True:
@@ -66,7 +68,9 @@ def user_input(wc):
 
 
 def main():
-    data = []
     filename = 'reviews.txt'
-
+    data = read_file(filename)
+    wc = write_dict(data)
+    print_frequency(wc)
+    user_input(wc)
 main()
